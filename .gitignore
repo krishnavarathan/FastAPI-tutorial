@@ -1,6 +1,7 @@
 .python-version
 README.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 home_finished.html
 layout_finished.html
 error_finished.html
@@ -8,8 +9,13 @@ post_finished.html
 __pycache__
 
 =======
+=======
+>>>>>>> bbf23796a3e6f5e12208882671e2106be67e7b99
 snippets.txt
 home_finished.html
 layout_finished.html
 __pycache__
+<<<<<<< HEAD
+>>>>>>> bbf23796a3e6f5e12208882671e2106be67e7b99
+=======
 >>>>>>> bbf23796a3e6f5e12208882671e2106be67e7b99

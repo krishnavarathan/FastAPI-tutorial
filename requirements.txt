@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+<<<<<<< HEAD
+pydantic
+Jinja2Templates
+JSONResponse
+RequestValidationError
+=======
+pydantic
+>>>>>>> bbf23796a3e6f5e12208882671e2106be67e7b99

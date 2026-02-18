@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 from fastapi import FastAPI, Request, HTTPException, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.exceptions import HTTPException as StarletteHTTPException
-=======
-from fastapi import FastAPI, Request
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
->>>>>>> bbf23796a3e6f5e12208882671e2106be67e7b99
 
 app = FastAPI()
 
@@ -47,40 +41,17 @@ def home(request: Request): # The function name 'home' is used as a reference fo
         {"posts": posts, "title":"Home"},
     )
 
-<<<<<<< HEAD
-
-
-@app.get('/posts/{post_id}', include_in_schema=False)
-def post_page(request: Request, post_id:int):
-    for post in posts:
-        if post.get('id') == post_id:
-            title = post['title'][:15]
-            return templates.TemplateResponse(
-                request,
-                "post.html",
-                {"post": post, "title":title}
-
-            )
-    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Post not found!")
-
-
-=======
->>>>>>> bbf23796a3e6f5e12208882671e2106be67e7b99
 @app.get('/api')
 def api():
     return {
         'message' : 'api-end point'
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> bbf23796a3e6f5e12208882671e2106be67e7b99
 @app.get('/api/posts/')
 def get_posts():
     return posts
 
-<<<<<<< HEAD
+
 @app.get('/api/posts/{post_id}')
 def get_post(request: Request, post_id:int):
     for post in posts:
@@ -132,27 +103,3 @@ def validation_exception_handler(request: Request, exception: RequestValidationE
 
 print('Hi')
 
-=======
-
-# Displaying the XML format
-# @app.get("/legacy/")
-# def get_legacy_data():
-#     data = """<?xml version="1.0"?>
-#     <shampoo>
-#     <Header>
-#         Apply shampoo here.
-#     </Header>
-#     <Body>
-#         You'll have to use soap here.
-#     </Body>
-#     </shampoo>
-#     """
-#     return Response(content=data, media_type="application/xml")
-
-# a=1
-# for route in app.routes:
-#     print(f"{a},{route.path}, {route.endpoint}")
-#     a+=1
-
-print('Hi')
->>>>>>> bbf23796a3e6f5e12208882671e2106be67e7b99

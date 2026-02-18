@@ -1,7 +1,9 @@
 .python-version
 README.md
-home_finished.html
-layout_finished.html
 error_finished.html
+home_finished.html
 post_finished.html
+layout_finished.html
+post_finished.html
+user_posts_finished.html
 __pycache__

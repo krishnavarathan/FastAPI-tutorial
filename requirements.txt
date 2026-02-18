@@ -1,6 +1,6 @@
 fastapi
 uvicorn
+sqlalchemy
+jinja2
 pydantic
-Jinja2Templates
-JSONResponse
-RequestValidationError
+starlette

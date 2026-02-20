@@ -72,7 +72,8 @@ async def get_user_posts(user_id: int, db: Annotated[AsyncSession, Depends(get_d
     result = await db.execute(
         select(models.Post)
         .options(selectinload(models.Post.author))
-        .where(models.Post.user_id == user_id),
+        .where(models.Post.user_id == user_id)
+        .order_by(models.Post.date_posted.desc())
     )
     posts = result.scalars().all()
     return posts
@@ -126,7 +127,8 @@ async def update_user(
 ## delete_user
 @router.delete("/{user_id}", status_code=status.HTTP_204_NO_CONTENT) # prefix="/api/users"
 async def delete_user(user_id: int, db: Annotated[AsyncSession, Depends(get_db)]):
-    result = await db.execute(select(models.User).where(models.User.id == user_id))
+    result = await db.execute(select(models.User)
+             .where(models.User.id == user_id))
     user = result.scalars().first()
     if not user:
         raise HTTPException(

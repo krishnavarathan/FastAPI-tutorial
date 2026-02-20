@@ -4,3 +4,11 @@ sqlalchemy
 jinja2
 pydantic
 starlette
+aiosqlite
+python-multipart
+pydantic-settings
+python-jose
+passlib
+pwdlib
+email-validator
+PyJWT

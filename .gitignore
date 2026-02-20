@@ -6,8 +6,14 @@ post_finished.html
 layout_finished.html
 post_finished.html
 user_posts_finished.html
+auth_finished.html
+login_finished.html
+register_finished.html
 blog.db
 __pycache__
 .prettierrc
 settings.json
 
+.env
+.vscode
+.venv

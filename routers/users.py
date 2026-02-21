@@ -110,7 +110,6 @@ async def get_user(user_id: int, db: Annotated[AsyncSession, Depends(get_db)]):
         return user
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
 
-    
 
 ## get_user_posts
 @router.get("/{user_id}/posts", response_model=list[PostResponse]) # prefix="/api/users"
@@ -139,7 +138,7 @@ async def update_user(
     current_user: CurrentUser,
     db: Annotated[AsyncSession, Depends(get_db)],
 ):
-    if user_id != create_user.id:
+    if user_id != current_user.id:
         raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail="Not authorized to Update this User",
@@ -194,7 +193,7 @@ async def delete_user(user_id: int,
                       current_user: CurrentUser,
                        db: Annotated[AsyncSession, Depends(get_db)]):
     
-    if user_id != create_user.id:
+    if user_id != current_user.id:
         raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail="Not authorized to Delete this User",

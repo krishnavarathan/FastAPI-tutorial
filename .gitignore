@@ -9,6 +9,7 @@ user_posts_finished.html
 auth_finished.html
 login_finished.html
 register_finished.html
+account_finished.html
 blog.db
 __pycache__
 .prettierrc

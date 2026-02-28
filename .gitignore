@@ -1,5 +1,6 @@
 .python-version
 README.md
+
 error_finished.html
 home_finished.html
 post_finished.html
@@ -10,6 +11,7 @@ auth_finished.html
 login_finished.html
 register_finished.html
 account_finished.html
+
 blog.db
 __pycache__
 .prettierrc

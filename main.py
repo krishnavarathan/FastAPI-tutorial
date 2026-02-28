@@ -19,6 +19,8 @@ from database import Base, engine, get_db
 
 from routers import posts, users
 
+
+
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     # Startup
